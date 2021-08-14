@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataPassService } from '../data-pass.service';
+import { waldenc } from '../type';
 
 @Component({
   selector: 'app-footer',

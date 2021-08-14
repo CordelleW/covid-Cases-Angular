@@ -1,10 +1,10 @@
 import { waldenc } from "src/app/type";
 
 export const LOGINS: waldenc[] = [
-    { id: 1,
+    { id: 991590447,
       name: "cordelle",
-    login: "weasd",
+    login: "waldenc",
     campus: "davis",
-    title: "student"
+    title: "Assignment 4"
     }
 ];
