@@ -1,21 +1,28 @@
 <!-- content component HTML -->
-<section class="gridArea">
-    <div class="imgArea common">
+
+  <mat-tab-group
+ 
+    mat-strecht-tabs
+    class="example-stretched-tabs mat-elevation-z4">
+  <mat-tab label="Health Worker Data">
+    
       <ul *ngFor="let list of dataList">
         <li>Date: {{list.Report_Data_Extracted}}</li>
         <li>Confirmed HCW Cases: {{list.Confirmed_Active_LTC_HCW_Cases}}</li>
         <li>Total HCW Deaths: {{list.Total_LTC_HCW_Deaths}}</li>
-        </ul>        
-    </div>
-    <div class="listArea common">
-      <h3>Covid Data:</h3>
+        </ul> 
+      </mat-tab>       
+    
+      <mat-tab label="Long-Term Care Home Data">
       <ul *ngFor="let list of dataList">
         <li>Date: {{list.Report_Data_Extracted}}</li>
-        <li >Active Ourbreaks: {{list.LTC_Homes_with_Active_Outbreak}}</li>
+        <li >Active Outbreaks: {{list.LTC_Homes_with_Active_Outbreak}}</li>
         <li>Resolved Outbreaks: {{list.LTC_Homes_with_Resolved_Outbreak}}</li>
         <li>Confirmed Active Cases: {{list.Confirmed_Active_LTC_Resident_Cases}}</li>
         <li>Confirmed Deaths: {{list.Total_LTC_Resident_Deaths}}</li>
       </ul>
-    </div>
-  </section>
+      </mat-tab>
+      </mat-tab-group>
+    
+
 

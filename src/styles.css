@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html, body { height: 100%; width: 100%; background-color: lightgrey;}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+    text-align: center;
+    display:block;
+}
+ul {
+    border: 1px solid black;
+}
+mat-tab-group{
+    height: 73%;
+    width: 90%;
+    margin: 0 auto;
+}
+@media screen and (orientation: landscape) {
+    mat-tab-group{
+        height: 51%;
+    }
+}
+
