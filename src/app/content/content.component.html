@@ -1,15 +1,20 @@
 <!-- content component HTML -->
 <section class="gridArea">
     <div class="imgArea common">
-      <img src="assets/images/eye.jpg" width="150px">
+      <ul *ngFor="let list of dataList">
+        <li>Date: {{list.Report_Data_Extracted}}</li>
+        <li>Confirmed HCW Cases: {{list.Confirmed_Active_LTC_HCW_Cases}}</li>
+        <li>Total HCW Deaths: {{list.Total_LTC_HCW_Deaths}}</li>
+        </ul>        
     </div>
     <div class="listArea common">
-      <h3>My Student Info:</h3>
-      <ul>
-        <li>Name: Cordelle</li>
-        <li>Campus: Davis</li>
-        <li>Number: 991000000</li>
-        <li>Username: enter your username</li>
+      <h3>Covid Data:</h3>
+      <ul *ngFor="let list of dataList">
+        <li>Date: {{list.Report_Data_Extracted}}</li>
+        <li >Active Ourbreaks: {{list.LTC_Homes_with_Active_Outbreak}}</li>
+        <li>Resolved Outbreaks: {{list.LTC_Homes_with_Resolved_Outbreak}}</li>
+        <li>Confirmed Active Cases: {{list.Confirmed_Active_LTC_Resident_Cases}}</li>
+        <li>Confirmed Deaths: {{list.Total_LTC_Resident_Deaths}}</li>
       </ul>
     </div>
   </section>
