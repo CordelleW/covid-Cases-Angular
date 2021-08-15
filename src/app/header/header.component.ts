@@ -1,7 +1,7 @@
-import { Component, OnInit, Type } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Data } from '@angular/router';
 import { waldenc } from '../type';
-import { DataPassService } from '../data-pass.service';
+
 
 @Component({
   selector: 'app-header',
@@ -9,18 +9,13 @@ import { DataPassService } from '../data-pass.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  dataPass!: waldenc[];
+  @Input() dataPass!: waldenc[];
   
-  constructor(private myService: DataPassService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.loadDataPass();
-    
+  ngOnInit(): void {   
     
   }
-  loadDataPass(): void{
-    this.dataPass = this.myService.loadWaldencData();
-    console.log(this.dataPass);
-  }
+  
   
 }

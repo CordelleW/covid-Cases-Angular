@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DataPassService } from '../data-pass.service';
+import { Component, OnInit,Input } from '@angular/core';
 import { waldenc } from '../type';
-
 
 @Component({
   selector: 'app-footer',
@@ -9,15 +7,12 @@ import { waldenc } from '../type';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  dataPass!: waldenc[];
+  @Input() dataPass!: waldenc[];
   
-  constructor(private myService: DataPassService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.loadDataPass();
+    
   }
-  loadDataPass(): void{
-    this.dataPass = this.myService.loadWaldencData();
-    console.log(this.dataPass);
-  }
+  
 }

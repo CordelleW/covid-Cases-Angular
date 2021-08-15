@@ -11,6 +11,7 @@ export class DataPassService {
   constructor() { }
   loadWaldencData(): waldenc[] {
     return WALDENCDATA;}
+    
 }
 
 
